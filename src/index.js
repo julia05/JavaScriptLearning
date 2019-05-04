@@ -52,17 +52,6 @@ button.addEventListener("wheel", function() {
 
 const htmlBody = document.querySelector("body");
 
-// emoji kopiert
-button.addEventListener("click", function() {
-  console.log("😜");
-
-  // toggle schaltet um, wenn das Event shcon passiert ist
-  // macht es ncihts ansonsten löst es aus
-  // in dem Fall Hintergrundfarbe wird geändert
-  htmlBody.classList.toggle("fontChange");
-  button.classList.toggle("colorChange");
-});
-
 // LOGIK
 
 var a = "20";
@@ -93,19 +82,34 @@ if (a !== b && b < c) {
 }
 
 const firstInput = document.querySelector(".firstInput");
+var secondInput = document.querySelector(".secondInput");
 
 // überprüfen ob ich richtiges Element hab
 //console.log(inputField);
 
+// 2 EventListener auf das gleiche Event z.B. click > NOOT GOOD
 button.addEventListener("click", function() {
-  const input = firstInput.value;
-  console.log("Value of input field: " + input);
+  // emoji kopiert
+  console.log("😜");
+
+  // toggle schaltet um, wenn das Event shcon passiert ist
+  // macht es ncihts ansonsten löst es aus
+  // in dem Fall Hintergrundfarbe wird geändert
+  htmlBody.classList.toggle("fontChange");
+  button.classList.toggle("colorChange");
+
+  const input1 = firstInput.value;
+  secondInput.value = input1 * 10;
+
+  console.log("Value of input field: " + input1);
 });
 
 var notNumber = "LoL";
-var Number = 111;
 
 const temp = parseInt(notNumber);
+
+// parameter bei parseInt > radix
+const temp2 = parseInt(notNumber, 10);
 
 // NaN
 console.log(temp);
