@@ -91,3 +91,21 @@ if (a !== b && b < c) {
 } else {
   console.log("bääh");
 }
+
+const firstInput = document.querySelector(".firstInput");
+
+// überprüfen ob ich richtiges Element hab
+//console.log(inputField);
+
+button.addEventListener("click", function() {
+  const input = firstInput.value;
+  console.log("Value of input field: " + input);
+});
+
+var notNumber = "LoL";
+var Number = 111;
+
+const temp = parseInt(notNumber);
+
+// NaN
+console.log(temp);
